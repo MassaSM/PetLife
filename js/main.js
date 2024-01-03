@@ -14,3 +14,13 @@ elementosDuvida.forEach(function(duvida){
         duvida.classList.toggle('active')
     })
 })
+
+/*Scroll */
+$(document).ready(function() {
+    $(".link__nav").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top
+          }, 500);
+      });
+  });
